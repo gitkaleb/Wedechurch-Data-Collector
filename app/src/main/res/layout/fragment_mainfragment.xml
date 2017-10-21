@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp"
+                android:paddingLeft="10dp"
+                android:text="Church information" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/contactframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:textColorHint="@color/white">
+
+                            <EditText
+                                android:id="@+id/input_church_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="email"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+
+
+                        <TextView
+                            android:id="@+id/churchphone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:autoLink="email"
+                            android:paddingBottom="20dp"
+                            android:text="+251"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#212121"
+                            android:textColorLink="#2f94ff" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/churchphone"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_toEndOf="@+id/churchphone"
+                            android:layout_toRightOf="@+id/churchphone"
+                            android:textColorHint="@color/white">
+
+                            <EditText
+                                android:id="@+id/input_church_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="phone number"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:textColorHint="@color/white">
+
+                            <EditText
+                                android:id="@+id/input_church_website"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="website"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:textColorHint="@color/white">
+
+                            <EditText
+                                android:id="@+id/input_church_location"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Area"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+
+                        <ImageView
+                            android:id="@+id/buttonpic"
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            app:srcCompat="@drawable/ic_menu_camera" />
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btn_pic"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/buttonpic"
+                            android:layout_toRightOf="@+id/buttonpic"
+                            android:background="@color/colorAccent"
+                            android:padding="12dp"
+
+                            android:text="Take Picture"
+                            android:textColor="@color/white">
+
+                        </android.support.v7.widget.AppCompatButton>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+
+                        <ImageView
+                            android:id="@+id/churchgpsimg"
+                            android:layout_width="25dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            app:srcCompat="@mipmap/ic_gps" />
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btn_login"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent"
+                            android:padding="12dp"
+
+                            android:text="Get GPS coordinate"
+                            android:textColor="@color/white"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toRightOf="@+id/churchgpsimg"
+                            android:layout_toEndOf="@+id/churchgpsimg" />
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/schedulcontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="50dp">
+                        <EditText
+                            android:id="@+id/input_church_program"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Program"
+                            android:layout_weight="1"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/input_church_start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Time"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/input_church_end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date"
+                            android:layout_weight="1"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/getchurchdirection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_anchor="@+id/scroll"
+                        app:srcCompat="@mipmap/ic_add" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/scheduleframe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contactframe"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="50dp">
+
+                <ListView
+                    android:id="@+id/ScheduleList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_submitt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:padding="12dp"
+
+                android:layout_below="@+id/scheduleframe"
+                android:text="Register"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
