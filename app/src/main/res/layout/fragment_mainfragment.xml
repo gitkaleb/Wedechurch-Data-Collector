@@ -61,7 +61,7 @@
                                 android:id="@+id/input_church_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="email"
+                                android:hint="church name"
                                 android:inputType="textEmailAddress"
                                 android:textColor="@color/material_grey_700" />
                         </android.support.design.widget.TextInputLayout>
@@ -191,7 +191,7 @@
                                 android:id="@+id/input_church_location"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Area"
+                                android:hint="location"
                                 android:inputType="textEmailAddress"
                                 android:textColor="@color/material_grey_700" />
                         </android.support.design.widget.TextInputLayout>
@@ -273,6 +273,12 @@
                             android:text="Get GPS coordinate"
                             android:textColor="@color/white" />
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_below="@+id/btn_gps"
+                        android:paddingBottom="10dp">
                         <TextView
                             android:id="@+id/textview_longitude"
                             android:layout_width="wrap_content"
@@ -282,7 +288,9 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="#212121"
                             android:textColorLink="#2f94ff"
-                            android:layout_below="@+id/btn_gps"/>
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
                         <TextView
                             android:id="@+id/textview_lattitude"
                             android:layout_width="wrap_content"
@@ -294,98 +302,21 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="#212121"
                             android:textColorLink="#2f94ff"
-                            android:layout_below="@+id/btn_gps"/>
-
+                           />
+                        </RelativeLayout>
 
                     </RelativeLayout>
 
-                    <LinearLayout
-                        android:id="@+id/schedulcontainer"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="20dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/activity_horizontal_margin"
-                        android:paddingBottom="50dp"
-                        android:weightSum="3">
 
-                        <EditText
-                            android:id="@+id/input_church_program"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Program"
-                            android:inputType="textEmailAddress"
-                            android:textColor="@color/white" />
-
-                        <EditText
-                            android:id="@+id/input_church_start_time"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Time"
-                            android:inputType="textEmailAddress"
-                            android:textColor="@color/white" />
-
-                        <EditText
-                            android:id="@+id/input_church_end_date"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Date"
-                            android:inputType="textEmailAddress"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <android.support.design.widget.FloatingActionButton
-                        android:id="@+id/getchurchdirection"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:paddingTop="10dp"
-                        app:layout_anchor="@+id/scroll"
-                        app:srcCompat="@mipmap/ic_add" />
-
-                </LinearLayout>
+                  </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/scheduleframe"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/contactframe"
-                app:cardElevation="5dp"
-                app:cardUseCompatPadding="true">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-
-                    android:padding="@dimen/activity_horizontal_margin"
-                    android:paddingBottom="50dp">
-
-                    <ListView
-                        android:id="@+id/ScheduleList"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.AppCompatButton
+              <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_submit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_below="@+id/scheduleframe"
+                android:layout_below="@+id/contactframe"
                 android:background="@color/colorAccent"
 
                 android:padding="12dp"

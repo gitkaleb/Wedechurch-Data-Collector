@@ -156,28 +156,28 @@ public class mainfragment extends Fragment implements RequestCallback, registerP
         }
 
         if (program.isEmpty() ) {
-            input_church_program.setError("between 4 and 10 alphanumeric characters");
+            input_church_program.setError("insert program name to the fild");
             valid = false;
         } else {
             input_church_program.setError(null);
         }
 
         if (time.isEmpty() ) {
-            input_church_start_time.setError("between 4 and 10 alphanumeric characters");
+            input_church_start_time.setError("insert program time to the fild");
             valid = false;
         } else {
             input_church_start_time.setError(null);
         }
 
         if (date.isEmpty() ) {
-            input_church_end_date.setError("between 4 and 10 alphanumeric characters");
+            input_church_end_date.setError("insert program date to the fild");
             valid = false;
         } else {
             input_church_end_date.setError(null);
         }
 
         if (location.isEmpty() ) {
-            input_church_location.setError("between 4 and 10 alphanumeric characters");
+            input_church_location.setError("insert program location to the fild");
             valid = false;
         } else {
             input_church_location.setError(null);
@@ -190,25 +190,24 @@ public class mainfragment extends Fragment implements RequestCallback, registerP
     public void sendRegisterRequest() {
         myProgressDialog.setTitle("Registering ....");
         myProgressDialog.show();
-        EditText input_church_name,input_church_email,input_church_phone,input_church_website,input_church_location,input_church_program,input_church_end_date,input_church_start_time;
 
 
         New_Church = new Church();
-        New_Church.setBanner(_passwordText.getText().toString());
+        New_Church.setBanner(" ");
         New_Church.setChurchName(input_church_name.getText().toString());
-        New_Church.setCities(_mobileText.getText().toString());
+        New_Church.setCities(" ");
         New_Church.setPhone("+251"+input_church_phone.getText().toString());
-        New_Church.setCountry(_countryText.getText().toString());
-        New_Church.setDenomination(_nameFText.getText().toString());
+        New_Church.setCountry(" ");
+        New_Church.setDenomination(" ");
         New_Church.setLocation(input_church_location.getText().toString());
         New_Church.setWebUrl(input_church_website.getText().toString());
-        New_Church.setState(_nameLText.getText().toString());
-        New_Church.setLongitude(_nameLText.getText().toString());
+        New_Church.setState(" ");
+        New_Church.setLongitude(" ");
+        New_Church.setLatitude(" ");
         New_Church.setEmail(input_church_email.getText().toString());
-       
+
         final ProgressDialog myDialog = new ProgressDialog(getActivity());
         myDialog.setTitle(R.string.app_name);
-        myDialog.setCancelable(false);
         myDialog.setMessage("Registering Church ....");
         myDialog.show();
 
@@ -217,16 +216,14 @@ public class mainfragment extends Fragment implements RequestCallback, registerP
 
         List<Pair<String, String>> Send_Param = new ArrayList<>();
         Send_Param.add(new kotlin.Pair<String, String>("param", myParser.toJson(New_Church)));
-
-
-        mySendRequestService = new SendRequestService(Send_Param, "http://wede.api.myims.org/api/churches",RequestServices.REGISTRATION_REQUEST.SERVICE.toString(),getActivity());
+        mySendRequestService = new SendRequestService(Send_Param, "http://wede.api.myims.org/api/churches",RequestServices.REGISTRATION_REQUEST.ChurchSERVICE.toString(),getActivity());
         mySendRequestService.processRequest(this);
 
     }
 
     @Override
     public void successCallback(String str,String service,Context context) {
-        if(service.equalsIgnoreCase(RequestServices.REGISTRATION_REQUEST.SERVICE.toString())) {
+        if(service.equalsIgnoreCase(RequestServices.REGISTRATION_REQUEST.ChurchSERVICE.toString())) {
             myProgressDialog.cancel();
             apiResponseService.processRegisterResponse(str, this);
         }

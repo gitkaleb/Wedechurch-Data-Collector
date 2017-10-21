@@ -31,6 +31,7 @@ public class RequestServices {
     public enum REGISTRATION_REQUEST {
 
         SERVICE("register"),
+        ChurchSERVICE("registerchurch"),
 
         FIRST_NAME("first_name"),
         LAST_NAME("last_name"),
