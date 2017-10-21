@@ -27,8 +27,12 @@ public class Church extends SugarRecord {
     private String logo;
     private String parentChurchId;
     private String state;
+    private String email;
+
+
 
     public Church() {
+
     }
 
 
@@ -152,6 +156,21 @@ public class Church extends SugarRecord {
         this.state = state;
     }
 
-     Fav fav;
+    public String getSirid() {
+        return sirid;
+    }
+
+    public void setSirid(String sirid) {
+        this.sirid = sirid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 
 }
