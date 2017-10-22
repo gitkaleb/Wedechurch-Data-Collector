@@ -9,39 +9,39 @@ import com.orm.SugarRecord;
 public class Schedules extends SugarRecord {
 
 
-    private String Catagory,Date,Time;
+    private String schedule_name,schedule_Date,schedule_Time;
 
     public Schedules(String catagory, String date, String time) {
-        Catagory = catagory;
-        Date = date;
-        Time = time;
+        schedule_name = catagory;
+        schedule_Date = date;
+        schedule_Time = time;
     }
 
     public Schedules() {
 
     }
 
-    public String getCatagory() {
-        return Catagory;
+    public String getSchedule_name() {
+        return schedule_name;
     }
 
-    public void setCatagory(String catagory) {
-        Catagory = catagory;
+    public void setSchedule_name(String catagory) {
+        schedule_name = catagory;
     }
 
-    public String getDate() {
-        return Date;
+    public String getSchedule_Date() {
+        return schedule_Date;
     }
 
-    public void setDate(String date) {
-        Date = date;
+    public void setSchedule_Date(String date) {
+        schedule_Date = date;
     }
 
-    public String getTime() {
-        return Time;
+    public String getSchedule_Time() {
+        return schedule_Time;
     }
 
-    public void setTime(String time) {
-        Time = time;
+    public void setSchedule_Time(String time) {
+        schedule_Time = time;
     }
 }

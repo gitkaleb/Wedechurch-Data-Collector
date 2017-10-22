@@ -32,6 +32,7 @@ public class RequestServices {
 
         SERVICE("register"),
         ChurchSERVICE("registerchurch"),
+        SCHEDULESERVICE("registerschedule"),
 
         FIRST_NAME("first_name"),
         LAST_NAME("last_name"),

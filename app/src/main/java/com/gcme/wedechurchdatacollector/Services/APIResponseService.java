@@ -82,6 +82,22 @@ public class APIResponseService {
         }
     }
 
+    public void processScheduleResponse(String jsonResponse,scheduleProcessResult regiserProcessResult){
+        try {
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+            if(!jsonObject.isNull("response")){
+
+                regiserProcessResult.onChurchRegister();
+
+            }else {
+                regiserProcessResult.onRegisterFailed();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+            regiserProcessResult.onProcessError(e.toString());
+        }
+    }
+
     public ArrayList processGetChurchData(String json_array, NewChurchData newChurches){
         ArrayList<Church> churchlist=new ArrayList<>();
         try {
